@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import SelectedUserCard from "./components/SelectedUserCard";
 import UserCard from "./components/UserCard";
-
+import "./App.css";
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [users, setUsers] = useState(null);
@@ -62,7 +62,7 @@ export default function App() {
     <div className="App">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-6 ">
+          <div className="col-8 ">
             {users?.map((user) => (
               <UserCard
                 key={user.id}

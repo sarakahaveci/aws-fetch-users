@@ -9,7 +9,7 @@ const UserCard = ({ user, onCheckboxChange }) => {
         checked={user.isChecked}
       />
       <div>
-        <p>{user.username}</p>
+        <h3>{user.username}</h3>
       </div>
     </div>
   );
