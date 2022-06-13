@@ -59,21 +59,24 @@ export default function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-8 ">
-            {users?.map((user) => (
-              <UserCard
-                key={user.id}
-                user={user}
-                onCheckboxChange={onCheckboxChange}
-              />
-            ))}
+          <div className="App">
+            <h4>Choose the user</h4>
+            <div className="col-4">
+              {users?.map((user) => (
+                <UserCard
+                  key={user.id}
+                  user={user}
+                  onCheckboxChange={onCheckboxChange}
+                />
+              ))}
+            </div>
           </div>
-          <div className="col-4">
+          <div className="col-4 flex-md-row ">
             {checkedList.length <= 0 ? (
-              <div>No selected users</div>
+              <h4>No selected users!</h4>
             ) : (
               checkedList?.map((checkedUser) => (
                 <SelectedUserCard

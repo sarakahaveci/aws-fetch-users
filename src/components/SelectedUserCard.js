@@ -1,9 +1,14 @@
 const SelectedUserCard = ({ checkedUser, onSelectedCardClick }) => {
   return (
     <div onClick={() => onSelectedCardClick(checkedUser.id)}>
-      <p>{checkedUser.username}</p>
-      <p>{checkedUser.email}</p>
-      <p>{checkedUser.phone}</p>
+      <div
+        className="users"
+        style={{ display: "flex", marginTop: "3vw", width: "70vh" }}
+      >
+        <p>{checkedUser.username}</p>
+        <h6>{checkedUser.email}</h6>
+        <p>{checkedUser.phone}</p>
+      </div>
     </div>
   );
 };
